@@ -1,0 +1,4 @@
+Android's adb source code and required components,
+stripped into a modular build system.
+
+The end goal will be an adb library like libirecovery.
