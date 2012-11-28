@@ -2,14 +2,17 @@ LD=gcc
 LDFLAGS=-static
 LIBS=-lcrypto -ldl -lrt -lpthread
 
-all: adb
+all: adb libadb
+
+libadb:
+	mv adbexec.o adbexec.obj
+	gcc -o libadb.so *.o -shared -W1,-soname,libadb.so $(LIBS)
+	mv adbexec.obj adbexec.o
 
 adb:
-	mv ../src/libadb/*.o .
-	mv ../src/libcutils/*.o .
-	mv ../src/libzipfile/*.o .
-	mv ../src/zlib/*.o .
+	mv libadb.o libadb.obj
 	$(LD) -o $@ $(LDFLAGS) *.o $(LIBS)
+	mv libadb.obj libadb.o
 
 clean:
-	rm adb *.o
+	rm adb *.o *.so

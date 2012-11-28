@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS = -g -w -I. -I../../include/
+CFLAGS = -g -w -fPIC -I. -I../../include/
 
 SRCS= abort_socket.c
 SRCS+= list.c

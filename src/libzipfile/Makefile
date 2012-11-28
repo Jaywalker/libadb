@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS = -g -w -I. -I../../include/
+CFLAGS = -g -w -fPIC -I. -I../../include/
 
 SRCS= centraldir.c
 SRCS+= zipfile.c

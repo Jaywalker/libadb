@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS = -g -w -I. -I../../include/zlib
+CFLAGS = -g -w -fPIC -I. -I../../include/zlib
 
 SRCS= adler32.c
 SRCS+= compress.c
