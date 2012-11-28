@@ -4,7 +4,6 @@ CFLAGS = -g -w -fPIC -I. -I../../include/ -DADB_HOST=1 -DHAVE_FORKEXEC=1 -DHAVE_
 SRCS= adb.c
 SRCS+= adb_auth_host.c
 SRCS+= adb_client.c
-SRCS+= adbexec.c
 SRCS+= commandline.c
 SRCS+= console.c
 SRCS+= file_sync_client.c
