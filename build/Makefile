@@ -6,7 +6,7 @@ all: adb libadb
 
 libadb:
 	mv adbexec.o adbexec.obj
-	gcc -o libadb.so *.o -shared -W1,-soname,libadb.so $(LIBS)
+	gcc -o libadb.so *.o -shared -Wl,-soname,libadb.so $(LIBS)
 	mv adbexec.obj adbexec.o
 
 adb:
